@@ -1,0 +1,242 @@
+/* Tổng thể */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: #e9ecef;
+}
+
+/* Header */
+header {
+  flex: 0 0 auto;
+  background: #7AC5CD;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+header nav ul li a i {
+  margin-right: 8px;
+  font-size: 1.2em;
+}
+
+header nav ul li a:hover {
+  color: #d4d4d4;
+}
+
+/* Tìm kiếm bệnh viện */
+#search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%; /* Đảm bảo container có chiều rộng đầy đủ */
+}
+
+#search-hospital {
+  padding: 5px 30px 5px 10px;  /* Thêm padding bên phải để tạo không gian cho icon x */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  width: 200px;
+  margin-right: 5px;
+}
+
+#search-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-button i {
+  font-size: 1.2em;
+}
+
+#search-button:hover {
+  background-color: #0056b3;
+}
+
+#clear-search {
+  position: absolute;
+  right: 55px; /* Điều chỉnh vị trí icon "x" để tránh đè lên button */
+  font-size: 1em;
+  cursor: pointer;
+  color: #aaa;
+  display: none;  /* Ẩn icon x khi ô input trống */
+}
+
+#clear-search:hover {
+  color: black;
+}
+
+/* User menu */
+#user-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#user-menu li {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+#user-menu li a {
+  color: black;
+  text-decoration: none;
+}
+
+#user-menu li a:hover {
+  color: red;
+}
+
+/* Phần chính (Main) */
+main {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bản đồ */
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  text-align: center;
+}
+
+.popup h3 {
+  font-size: 1.5em;
+  color: black;
+  margin-bottom: 1.5em;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.popup-close:hover {
+  color: red;
+}
+
+.popup input {
+  width: 95%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.popup button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.popup i {
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 1.3em;
+}
+
+.popup p {
+  margin-bottom: 1em;
+}
+
+.popup p strong {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  flex: 0 0 auto;
+  background: #7AC5CD;
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+  font-size: 0.9em;
+}
+
+
+

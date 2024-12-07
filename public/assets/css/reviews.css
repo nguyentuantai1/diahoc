@@ -1,0 +1,281 @@
+/* Cấu trúc chung */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  background-color: #7AC5CD;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1em;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  color: #00FA9A;
+}
+
+/* Phần chính */
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Phần chọn bệnh viện */
+#review-section {
+  padding: 20px;
+}
+
+#hospital-select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+#hospital-select:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+#hospital-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px;
+  object-fit: cover;
+  display: none;
+}
+
+/* Phần đánh giá */
+#rating-form {
+  margin-top: 20px;
+}
+
+#star-rating {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 15px;
+}
+
+.star {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star.active {
+  color: #FFD700;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+#submit-review {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+#submit-review:hover {
+  background-color: #45a049;
+}
+
+/* Phần danh sách đánh giá */
+#reviews-list {
+  margin-top: 30px;
+}
+
+.review-item {
+  background-color: #fff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-item h4 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.review-item p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.review-item small {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Phần trả lời bình luận */
+.replies {
+  margin-top: 20px;
+  padding-left: 20px;
+  border-left: 3px solid #ddd;
+}
+
+.reply {
+  background-color: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.reply-to-reply {
+  background-color: #e8f5e9;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.reply-to-reply-form {
+  margin-top: 10px;
+  display: none;
+}
+
+.reply-to-reply-comment {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.submit-reply-to-reply {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-reply-to-reply:hover {
+  background-color: #45a049;
+}
+
+.reply-form {
+  margin-top: 10px;
+  display: none;
+}
+
+.reply-comment {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.submit-reply {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-reply:hover {
+  background-color: #45a049;
+}
+
+/* Các nút like, reply và xóa */
+button {
+  background-color: #f1f1f1;
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+button.like-btn {
+  background-color: #fff;
+}
+
+button.like-btn:hover {
+  background-color: #ffe0b3;
+}
+
+/* Định dạng lại phần footer */
+footer {
+  background-color: #7AC5CD;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
